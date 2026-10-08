@@ -4,7 +4,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    image: ghcr.io/r9r-dev/abiotic-crafting-notes-frontend:latest
+    image: ghcr.io/ronalove/abiotic-crafting-notes-frontend:latest
     restart: unless-stopped
     depends_on:
       - abiotic-backend
@@ -17,7 +17,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: ghcr.io/r9r-dev/abiotic-crafting-notes-backend:latest
+    image: ghcr.io/ronalove/abiotic-crafting-notes-backend:latest
     environment:
       - TZ=Europe/Paris
       - POSTGRES_USER=${POSTGRES_USER}
